@@ -11,15 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'PagesController@home');
+Route::get('/about', 'PagesController@about');
 
-Route::get('/about', function () {
-	$nama ='Rizqi Fauzan';
-    return view('about', ['nama' => $nama]);
-});
-
-// Route::get('/', function () {
-//     return view('mahasiswa');
-// });
+Route::get('/mahasiswa', 'MahasiswaController@index');
